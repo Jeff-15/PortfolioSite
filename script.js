@@ -27,3 +27,17 @@ function showPopup(bool) {
     document.getElementById('popup').style.visibility = 'hidden'
   }
 }
+
+
+function expand(bool){
+  if(bool){
+    const button=document.getElementById('expand');
+    button.onclick=function (){expand(false)};
+    button.innerText='collapse';
+  }
+  else{
+    const button=document.getElementById('expand');
+    button.onclick=function (){expand(true)};
+    button.innerText="expand";
+  }
+}
