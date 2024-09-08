@@ -29,15 +29,20 @@ function showPopup(bool) {
 }
 
 
+
 function expand(bool){
   if(bool){
     const button=document.getElementById('expand');
     button.onclick=function (){expand(false)};
     button.innerText='collapse';
+    const otherProjects=document.getElementById('otherProjects');
+    otherProjects.setAttribute("style","display:block");
   }
   else{
     const button=document.getElementById('expand');
     button.onclick=function (){expand(true)};
     button.innerText="expand";
+    const otherProjects=document.getElementById('otherProjects');
+    otherProjects.setAttribute("style","display:none");
   }
 }
